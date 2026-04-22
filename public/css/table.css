@@ -1,0 +1,159 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+
+/* Header */
+header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0 0 24px 0;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+/* Wrapper responsivo */
+.tabela-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Tabela */
+.tabela-candidatos {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+  font-size: 0.875rem;
+}
+
+/* Cabeçalho */
+.tabela-candidatos thead {
+  background: #1a1a2e;
+}
+
+.tabela-candidatos thead th {
+  color: #fff;
+  font-weight: 600;
+  text-align: left;
+  padding: 14px 12px;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Células */
+.tabela-candidatos tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #eaeaea;
+  vertical-align: middle;
+  color: #444;
+}
+
+/* Campos longos - quebram linha */
+.tabela-candidatos tbody td:nth-child(1),
+.tabela-candidatos tbody td:nth-child(3),
+.tabela-candidatos tbody td:nth-child(8),
+.tabela-candidatos tbody td:nth-child(9) {
+  max-width: 200px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Campos curtos - não quebram */
+.tabela-candidatos tbody td:nth-child(2),
+.tabela-candidatos tbody td:nth-child(4),
+.tabela-candidatos tbody td:nth-child(5),
+.tabela-candidatos tbody td:nth-child(6),
+.tabela-candidatos tbody td:nth-child(10) {
+  white-space: nowrap;
+}
+
+/* Linhas alternadas */
+.tabela-candidatos tbody tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+/* Hover */
+.tabela-candidatos tbody tr:hover {
+  background-color: #f0f4ff;
+}
+
+/* Botão */
+a {
+  display: inline-block;
+  margin-top: 24px;
+  text-decoration: none;
+}
+
+button {
+  background: #1a1a2e;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2d2d4a;
+}
+
+/* Responsivo - Tablet */
+@media screen and (max-width: 1024px) {
+  .tabela-candidatos tbody td:nth-child(1),
+  .tabela-candidatos tbody td:nth-child(3),
+  .tabela-candidatos tbody td:nth-child(8),
+  .tabela-candidatos tbody td:nth-child(9) {
+    max-width: 150px;
+  }
+}
+
+/* Responsivo - Mobile */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  header h1 {
+    font-size: 1.35rem;
+  }
+
+  .tabela-candidatos {
+    font-size: 0.8rem;
+  }
+
+  .tabela-candidatos thead th {
+    padding: 10px 8px;
+    font-size: 0.7rem;
+  }
+
+  .tabela-candidatos tbody td {
+    padding: 10px 8px;
+  }
+}
